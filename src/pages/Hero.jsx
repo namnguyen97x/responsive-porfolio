@@ -6,7 +6,7 @@ const Hero = () => {
     return(
         <div className='my-7 md:my-0 max-w-[1300px] mx-auto md:h-[70vh] grid grid-cols-1 md:grid-cols-4 place-items-center gap-4 px-4'>
             <div className='max-width-[400px] flex flex-col md:flex-col'>
-                <p className='md:text-5xl sm:text-3xl text-xl tracking-tighter'>
+                <p className='md:text-5xl sm:text-3xl text-2xl tracking-tighter'>
                     Hello, I am <br />
                     <span className='font-bold italic'>
                         DORAEMON <br />
