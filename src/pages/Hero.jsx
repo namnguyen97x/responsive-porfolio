@@ -20,7 +20,7 @@ const Hero = () => {
                         repeat={Infinity}
                     />
                 </p>
-                <button href="/" title='Download CV' className='bg-green-700 text-white px-4 py-2 rounded-md mt-6 block md:mt-6'>Download CV</button>
+                <button href="https://youtu.be/YEDj3lkVmsk?si=568BPOUBXy5z1Pnu" title='Hit me' className='bg-green-700 text-white px-4 py-2 rounded-md mt-6 block md:mt-6'>Download CV</button>
                 
             </div>
             <div className='md:col-span-2 md:ml-28'>

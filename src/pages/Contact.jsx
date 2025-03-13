@@ -8,27 +8,27 @@ const Contact = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 justify-between items-start max-w-6xl mx-auto'>
                 <div className='flex flex-col items-start space-y-8 w-full'>
                     <div className='flex items-center w-full bg-gray-800/50 p-6 rounded-lg'>
-                        <AiFillFacebook className='text-4xl text-gray-200 min-w-[40px]' />      
+                        <AiFillFacebook className='text-8xl text-gray-200 min-w-[40px]' />      
                         <div className='flex flex-col ml-5 w-full'>
-                            <p className='text-gray-200 text-2xl'>Contacts</p>
+                            <p className='text-gray-200 text-[20px] text-semi-bold'>Contacts</p>
                             <p className='text-gray-200'>Facebook: xx</p>
                             <p className='text-gray-200'>Messenger: xx</p>
                             <p className='text-gray-200'>Mobile: xx</p>
                         </div>
                     </div>
                     <div className='flex items-center w-full bg-gray-800/50 p-6 rounded-lg'>
-                        <AiFillGithub className='text-4xl text-gray-200 min-w-[40px]' />
+                        <AiFillGithub className='text-8xl text-gray-200 min-w-[40px]' />
                         <div className='flex flex-col ml-5 w-full'>
-                            <p className='text-gray-200 text-2xl'>Working hours:</p>
+                            <p className='text-gray-200 text-[20px] text-semi-bold'>Working hours:</p>
                             <p className='text-gray-200'>Mon-Fri: 8 am - 5 pm</p>
                             <p className='text-gray-200'>Messenger: xx</p>
                             <p className='text-gray-200'>&nbsp;</p>
                         </div>
                     </div>
                     <div className='flex items-center w-full bg-gray-800/50 p-6 rounded-lg'>
-                        <AiFillGoogleCircle className='text-4xl text-gray-200 min-w-[40px]' />
+                        <AiFillGoogleCircle className='text-8xl text-gray-200 min-w-[40px]' />
                         <div className='flex flex-col ml-5 w-full'>
-                            <p className='text-gray-200 text-2xl'>Google</p>
+                            <p className='text-gray-200 text-[20px] text-semi-bold'>Google</p>
                             <p className='text-gray-200'>Contact: xx</p>
                             <p className='text-gray-200'>Messenger: xx</p>
                             <p className='text-gray-200'>&nbsp;</p>
