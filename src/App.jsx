@@ -5,6 +5,7 @@ import Experience from "./pages/Experience";
 import Portfolio from "./pages/Portforlio";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
+import Chatbot from "./pages/Chatbot";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Contact />
       </section>
       <Footer />
+      <Chatbot />
     </div>
   )
 }
