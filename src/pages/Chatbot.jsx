@@ -89,28 +89,28 @@ const Chatbot = () => {
         <div className="fixed bottom-4 right-4 z-50">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white rounded-full p-4 shadow-lg transition-all duration-300 transform hover:scale-110"
+                className="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white rounded-full p-3 md:p-4 shadow-lg transition-all duration-300 transform hover:scale-110"
             >
-                {isOpen ? <AiOutlineClose size={28} /> : <BsChatDots size={28} />}
+                {isOpen ? <AiOutlineClose size={24} className="md:w-7 md:h-7" /> : <BsChatDots size={24} className="md:w-7 md:h-7" />}
             </button>
 
             {isOpen && (
-                <div className="absolute bottom-16 right-0 w-[380px] h-[550px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-slideUp">
-                    <div className="bg-gradient-to-r from-blue-400 to-blue-600 text-white p-5 rounded-t-2xl">
-                        <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white p-1">
+                <div className="absolute bottom-16 right-0 w-[90vw] md:w-[380px] h-[80vh] md:h-[550px] max-w-[380px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-slideUp">
+                    <div className="bg-gradient-to-r from-blue-400 to-blue-600 text-white p-3 md:p-5 rounded-t-2xl">
+                        <div className="flex items-center gap-2 md:gap-3">
+                            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-white p-1">
                                 <img src={doraicon} alt="Doraemon" className="w-full h-full object-cover" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold">Doraemon AI</h3>
-                                <p className="text-sm text-blue-100">Always here to help!</p>
+                                <h3 className="text-lg md:text-xl font-bold">Doraemon AI</h3>
+                                <p className="text-xs md:text-sm text-blue-100">Always here to help!</p>
                             </div>
                         </div>
                     </div>
 
                     <div 
                         ref={chatContainerRef}
-                        className="flex-1 overflow-y-auto p-5 space-y-4 bg-gray-50"
+                        className="flex-1 overflow-y-auto p-3 md:p-5 space-y-3 md:space-y-4 bg-gray-50"
                     >
                         {messages.map((message, index) => (
                             <div
@@ -118,12 +118,12 @@ const Chatbot = () => {
                                 className={`flex items-end gap-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                             >
                                 {message.sender === 'bot' && (
-                                    <div className="w-8 h-8 rounded-full overflow-hidden">
+                                    <div className="w-6 h-6 md:w-8 md:h-8 rounded-full overflow-hidden">
                                         <img src={doraicon} alt="Doraemon" className="w-full h-full object-cover" />
                                     </div>
                                 )}
                                 <div
-                                    className={`max-w-[75%] p-4 rounded-2xl ${
+                                    className={`max-w-[75%] p-3 md:p-4 rounded-2xl text-sm md:text-base ${
                                         message.sender === 'user'
                                             ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-br-none'
                                             : 'bg-white shadow-md text-gray-800 rounded-bl-none'
@@ -135,10 +135,10 @@ const Chatbot = () => {
                         ))}
                         {isLoading && (
                             <div className="flex items-end gap-2">
-                                <div className="w-8 h-8 rounded-full overflow-hidden">
+                                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full overflow-hidden">
                                     <img src={doraicon} alt="Doraemon" className="w-full h-full object-cover" />
                                 </div>
-                                <div className="bg-white shadow-md p-4 rounded-2xl rounded-bl-none animate-pulse">
+                                <div className="bg-white shadow-md p-3 md:p-4 rounded-2xl rounded-bl-none animate-pulse">
                                     <div className="flex gap-2">
                                         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                                         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce delay-100"></div>
@@ -149,22 +149,22 @@ const Chatbot = () => {
                         )}
                     </div>
 
-                    <div className="p-4 bg-white border-t border-gray-100 shadow-lg">
-                        <div className="flex items-center gap-3">
+                    <div className="p-3 md:p-4 bg-white border-t border-gray-100 shadow-lg">
+                        <div className="flex items-center gap-2 md:gap-3">
                             <input
                                 type="text"
                                 value={inputMessage}
                                 onChange={(e) => setInputMessage(e.target.value)}
                                 onKeyPress={handleKeyPress}
                                 placeholder="Ask me anything..."
-                                className="flex-1 p-3 bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                                className="flex-1 p-2 md:p-3 text-sm md:text-base bg-gray-50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
                             />
                             <button
                                 onClick={handleSendMessage}
                                 disabled={isLoading || !inputMessage.trim()}
-                                className="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white rounded-xl p-3 transition-all transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
+                                className="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white rounded-xl p-2 md:p-3 transition-all transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
                             >
-                                <AiOutlineSend size={24} />
+                                <AiOutlineSend size={20} className="md:w-6 md:h-6" />
                             </button>
                         </div>
                     </div>
